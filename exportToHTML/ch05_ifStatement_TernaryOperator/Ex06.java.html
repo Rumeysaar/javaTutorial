@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Ex06.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Ex06.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">ch05_ifStatement_TernaryOperator</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">Ex06 {</span>
+
+
+    <span class="s0">public static void </span><span class="s1">main(String[] args) {</span>
+
+        <span class="s2">/* 
+          TASK -&gt; kullanıcının cinsiyeti KADIN ise 60 yasından buyuk ve prim gunu 6000 den  fazla ise emekliliğini 
+                kullanıcının cinsiyeti ERKEK ise 65 yasından buyuk ve prim gunu 7000 den  fazla ise emekliliğini 
+                kontrol edip kalan yıl ve prim gununu print eden code create ediniz... 
+ 
+         */</span>
+
+        <span class="s1">Scanner input = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;cinsiyetiniz?&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">String cinsiyet = input.nextLine()</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;yasiniz?&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">yas = input.nextInt()</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;prim gunuz?&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">prim = input.nextInt()</span><span class="s0">;</span>
+
+
+        <span class="s0">if </span><span class="s1">(cinsiyet.equals (</span><span class="s3">&quot;kadin&quot;</span><span class="s1">) &amp; yas &gt;= </span><span class="s4">60 </span><span class="s1">&amp;&amp; prim &gt;= </span><span class="s4">6000</span><span class="s1">) {</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;emekli olabilirsiniz&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else if </span><span class="s1">(cinsiyet.equals(</span><span class="s3">&quot;kadin&quot;</span><span class="s1">) &amp; yas &lt;</span><span class="s4">60 </span><span class="s1">&amp; prim &lt; </span><span class="s4">6000</span><span class="s1">) {</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;kalan yil = &quot; </span><span class="s1">+ (</span><span class="s4">60</span><span class="s1">-yas) + </span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">kalan prim = &quot; </span><span class="s1">+ (</span><span class="s4">6000 </span><span class="s1">- prim))</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(cinsiyet.equals(</span><span class="s3">&quot;erkek&quot;</span><span class="s1">) &amp; yas &gt;= </span><span class="s4">65 </span><span class="s1">&amp;&amp; prim &gt;= </span><span class="s4">7000</span><span class="s1">) {</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;emekli olabilirsiniz&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span><span class="s0">else if </span><span class="s1">(cinsiyet.equals(</span><span class="s3">&quot;erkek&quot;</span><span class="s1">) &amp; yas &lt;</span><span class="s4">65 </span><span class="s1">&amp; prim &lt; </span><span class="s4">7000</span><span class="s1">) {</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;kalan yil = &quot; </span><span class="s1">+ (</span><span class="s4">65</span><span class="s1">-yas) + </span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">kalan prim = &quot; </span><span class="s1">+ (</span><span class="s4">7000 </span><span class="s1">- prim))</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+
+    <span class="s1">}</span>
+    <span class="s1">}</span>
+
+</pre>
+</body>
+</html>
