@@ -1,4 +1,4 @@
-package ch08_Loops;
+package ch08_Loops.L01_ForLoop;
 
 public class C05_PatternQuestion {
     public static void main(String[] args) {
@@ -6,7 +6,7 @@ public class C05_PatternQuestion {
 
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j <= i; j++) {
-                System.out.print((char) (65 + j) + " ");
+            System.out.print((char) (65 + j) + " ");
             }
             System.out.println();
         }
