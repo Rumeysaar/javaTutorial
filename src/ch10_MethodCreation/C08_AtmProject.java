@@ -3,13 +3,13 @@ package ch10_MethodCreation;
 import java.util.Scanner;
 
 public class C08_AtmProject {
-
+// buradaki methodlari ayri bi classa alip switchler icin de ayri bi class alip run edin !!
     static Scanner input = new Scanner(System.in);
     static String password = "1234a.";
     static double bakiye = 1000.25;
-    static int count = 3;
+    static int count = 2;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         sifreKontrol();
 
@@ -17,12 +17,19 @@ public class C08_AtmProject {
 
     }
 
-    private static void sifreKontrol() {
+    private static void sifreKontrol() throws InterruptedException {
         System.out.println("sifre giriniz");
         String sifre = input.nextLine();
 
         while (count > 0){
             if (sifre.equals(password)){
+                Thread.sleep(2000);
+                System.out.println("*");
+                Thread.sleep(2000);
+                System.out.println("**");
+                Thread.sleep(2000);
+                System.out.println("***");
+                Thread.sleep(2000);
                anaMenu();
                 break;
             }else {
@@ -47,15 +54,15 @@ public class C08_AtmProject {
 
         switch (secim){
             case 1 :
-               // bakiyeSorgula();
+                bakiyeSorgula();
                 anaMenu();
                 break;
             case 2 :
-                //paraYatir();
+                paraYatir();
                 anaMenu();
                 break;
             case 3 :
-                //paraCekma();
+                paraCekma();
                 anaMenu();
                 break;
             case 4 :
@@ -67,5 +74,35 @@ public class C08_AtmProject {
                 break;
 
         }
+    }
+
+    private static void paraCekma() {
+        System.out.println("bakiye = " + bakiye);
+        System.out.println("Cekilmak istenen miktar");
+        double cekMiktar = input.nextDouble();
+
+        if (cekMiktar > bakiye){
+            System.out.println("yetersiz bakiye");
+        }
+        else {
+            System.out.println("cekilmek istenen miktar " + cekMiktar);
+            System.out.println("bu tutari onayliyor musunuz?");
+           // boolean yesNo = Boolean.parseBoolean(input.nextLine());   to do cevabi almak
+            bakiye -= cekMiktar;
+            System.out.println("guncel bakiye " + bakiye);
+
+        }
+    }
+
+    private static void paraYatir() {
+        System.out.println("bakiye = " + bakiye);
+        System.out.println("yatirilmak istenen miktar");
+        double yatirMiktar = input.nextDouble();
+        bakiye += yatirMiktar;
+        System.out.println("guncel bakiye = " + bakiye);
+    }
+
+    private static void bakiyeSorgula() {
+        System.out.println("guncel bakiye = " + bakiye);
     }
 }

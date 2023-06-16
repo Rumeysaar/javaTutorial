@@ -1,5 +1,7 @@
 package ch01_Variables;
 
+import java.util.Scanner;
+
 public class HelloWorld {
 
     public static void main(String[] args) {
@@ -23,7 +25,7 @@ public class HelloWorld {
         System.out.println("meslek: muhasebe");
 
 
-        System.out.println("I am learning");
+
 
     }
 
