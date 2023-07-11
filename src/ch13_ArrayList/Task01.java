@@ -26,7 +26,6 @@ public class Task01 {
         }
         System.out.println("newNames = " + newNames);
 
-
     }
 
 }
