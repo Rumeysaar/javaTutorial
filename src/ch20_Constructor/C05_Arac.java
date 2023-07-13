@@ -14,15 +14,27 @@ birisi ilk satirda olamayacaktir, bu da ilk kuralla celisir.
     int maxHiz;
     String model;
 
+    public C05_Arac(){
+        this(30);
+        System.out.println("pmsiz const");
+    }
+
     public C05_Arac(int i){
         this (340, "Tesla");
         this.maxHiz = i;
         System.out.println("1 pm li const calisti");
     }
     public C05_Arac(int i, String marka){
-        //this (Audi, 400);
+        this ("AUDI", 400);
         System.out.println("2 pm li const calisti");
-        //this.
+        this.maxHiz = i;
+        this.model = marka;
+    }
+
+    public C05_Arac(String marka, int i){
+        System.out.println("2 pmli calisti String int");
+        this.maxHiz = i;
+        this.model = marka;
     }
 
 
