@@ -6,26 +6,19 @@ import ch25_Inheritance.inheritance.Fish;
 public class Runner {
     public static void main(String[] args) {
 
-        Animal animal1 = new Animal();
-        animal1.yeme();
-        animal1.icme();
-        animal1.hareket();
+      Cat cat1 = new Cat("cat");
+      Cat cat2 = new Cat();
+        System.out.println("cat2.number = " + cat2.number);
 
         Pet pet1 = new Pet();
+        System.out.println("pet1.number = " + pet1.number);
+        System.out.println("pet1.numberOfAnimals = " + pet1.numberOfAnimals);
+
+        pet1.icme();
         pet1.beslenme();
         pet1.hareket();
 
-
-        Fish hamsi = new Fish();
-        hamsi.izgaraBalik();
-        hamsi.yeme();
-
-        Dog dog1 = new Dog();
-        dog1.dogMethod();
-        dog1.beslenme();
-        dog1.icme();
-
-
+        System.out.println("pet1 = " + pet1);
 
 
 

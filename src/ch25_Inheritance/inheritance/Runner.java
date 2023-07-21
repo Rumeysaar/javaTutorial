@@ -22,7 +22,7 @@ public class Runner {
         dog1.beslenme();
         dog1.icme();
 
-
+        dog1.icme();
 
 
 
