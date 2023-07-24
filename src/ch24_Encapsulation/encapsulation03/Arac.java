@@ -2,8 +2,8 @@ package ch24_Encapsulation.encapsulation03;
 
 public class Arac {
     private String model;
-   private String renk;
-   private int motorHacmi;
+    private String renk;
+    private int motorHacmi;
     private int yil;
 
     public Arac(String model, String renk, int motorHacmi, int yil) {
